@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-image: url(./1716283273222.jpg);
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+a {
+    overflow-y;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+li:not(#title) a:hover::before {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    text-transform: uppercase;
+    color: aliceblue;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    padding: 0px 40px;
+
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+    font-size: medium;
+    margin: 0px;
+}
+
+nav ul li:not(#title) a {
+    font-weight: 700;
+}
+
+li {
+    margin: 15px;
+}
+
+.medlem {
+    border: 3px solid white;
+    padding: 15px 26px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.medlem:hover {
+    background-color: palevioletred;
+    color: white;
+}
+
+div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: center;
+}
+
+header #title {
+    font-weight: 200 !important;
+    font-size: 1.3rem;
+}
